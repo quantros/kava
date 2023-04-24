@@ -1,0 +1,287 @@
+/* index.html */
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f7f7f7;
+  }
+  
+  /* Стили для шапки */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 32px;
+    color: #333;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #666;
+  }
+  
+  
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  section {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px; /* Уменьшаем максимальную ширину до 500px */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    display: flex; /* Добавляем контейнеру для выравнивания вертикально */
+    flex-direction: column; /* Выравниваем элементы вертикально */
+  }
+  
+  section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  section img {
+    width: 100%;
+    height: 200px; /* Устанавливаем одинаковую высоту для всех изображений */
+    object-fit: cover; /* Описываем способ заполнения контейнера изображением */
+    margin-bottom: 20px;
+  }
+  
+  
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    align-self: center; /* Выравниваем заголовок по центру */
+  }
+  
+  section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    align-self: center; /* Выравниваем текст по центру */
+  }
+  
+  section button {
+    border: none;
+    background-color: #272727;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: auto; /* Размещаем кнопку внизу контейнера */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  section button:hover {
+    background-color: #fff;
+    color: #272727;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add styles for icons */
+  .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 5px;
+  }
+  
+  /* Use small icons for temperature, coffee and shelf */
+  .thermometer-icon, .coffee-icon, .shelf-icon {
+    width: 44px;
+    height: 44px;
+  }
+  .thermometer-icon {
+    background-image: url(https://img.icons8.com/color/48/000000/thermometer.png);
+  }
+  .coffee-icon {
+    background-image: url(https://img.icons8.com/color/48/000000/coffee-to-go.png);
+  }
+  .shelf-icon {
+    background-image: url(https://img.icons8.com/external-sbts2018-outline-color-sbts2018/512/external-sandclock-seo-4.-1-sbts2018-outline-color-sbts2018.png);
+  }
+  
+  /* modal */
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Add styles for modal close button */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    }
+    
+    /* Add styles for modal form */
+    .modal-form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .modal-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    }
+    
+    .modal-form input[type="text"], .modal-form input[type="email"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+    }
+    
+    .modal-form button[type="submit"] {
+    border: none;
+    background-color: #272727;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .modal-form button[type="submit"]:hover {
+    background-color: #fff;
+    color: #272727;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    @media screen and (max-width: 767px) {
+    section {
+    width: 100%;
+    }
+    }
+    
+    @media screen and (max-width: 480px) {
+    section {
+    margin-bottom: 20px;
+    }
+    }
+  
+    .icon-container {
+        display: flex;
+        align-items: center;
+      }
+      .icon {
+        margin-right: 5px;
+      }
+
+     /* Стили для социальных иконок */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    border: 1px solid #333;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .social-icons a:hover {
+    background-color: #333;
+  }
+  
+  .social-icons a:hover img {
+    filter: invert(100%);
+  }
+  
+  .social-icons a img {
+    width: 100%;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Стили для подвала */
+footer {
+  background-color: #ececec;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.footer-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
